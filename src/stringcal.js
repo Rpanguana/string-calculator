@@ -43,12 +43,27 @@
 
 function add(strngg) {
 
-
 var search = /-?[0-9]+/g;
+var negativenum = [];
 var changetonumber = strngg.match(search).map(function (x){
- return parseInt(x, 10);
+	let arr = [];
+		let i = 0;
+		let sum = 0;
 
-});
+		for (i < x.length; i > 0 ; i++)
+			return (x + " negatives not allowed");
+
+		if ( x < 0 ){
+			throw (arr.push(x) + " negatives not allowed");
+		};
+
+		if (x > 1000){
+			return (0);
+		}
+		return parseInt(x, 10);
+
+		});
+
 	let i = 0;
 	let sum = 0;
 
@@ -56,17 +71,16 @@ var changetonumber = strngg.match(search).map(function (x){
 
 		sum = sum + changetonumber[i];
 		i++;
-	
-		if ( strngg[i] < 0 ) {
-		return ( strngg[i] + "negatives not allowed");
-}}
-	//return (sum("34,7"));
+}
 	return sum;
 
-};
-	
+}
 
-console.info(add("//;1,2\n34,-64,4"))
+console.info(add("-4, 34, 3"))
+
+// Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed. 
+// if there are multiple negatives, show all of them in the exception message.
+
 
 // function add()
 // {

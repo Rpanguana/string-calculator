@@ -20,8 +20,8 @@ describe("Add string numbers", function() {
     expect(add("//;\n1;2")).toBe(3);
   });
 
-  // it("Should return an error", function() {
-  //   expect(add("-1,45")).toBe( -1 "negatives not allowed");
-  // });
+  it("Should return an error", function() {
+    expect(add("-1,45")).toThrow(-1 + "negatives not allowed");
+  });
 
 });
